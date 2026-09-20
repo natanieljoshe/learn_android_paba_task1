@@ -13,8 +13,77 @@
         android:id="@+id/utama_constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <View
+            android:id="@+id/bg_header"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#0F172A"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/header_padding_bottom" />
 
+        <!-- 2. Teks "OFFICIAL PROFILE" -->
+        <TextView
+            android:id="@+id/tv_official_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="24dp"
+            android:letterSpacing="0.15"
+            android:text="OFFICIAL_PROFILE"
+            android:textColor="#38BDF8"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/tv_univ_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:text="Universitas Kristen Petra"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_official_profile"
+            app:layout_constraintStart_toStartOf="@id/tv_official_profile"
+            app:layout_constraintEnd_toStartOf="@+id/iv_logo" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logopetra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_official_profile"
+            app:layout_constraintBottom_toBottomOf="@id/tv_univ_name" />
+
+        <TextView
+            android:id="@+id/tv_header_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="#1E293B"
+            android:lineSpacingExtra="5dp"
+            android:padding="16dp"
+            android:text="Universitas Kristen Petra (UK Petra) adalah perguruan tinggi swasta nasional di Surabaya yang berdiri sejak tahun 1961, berkomitmen membentuk global socioleaders dengan standar akademik unggul"
+            android:textColor="#CBD5E1"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_univ_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Space
+            android:id="@+id/header_padding_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_header_desc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
